@@ -1,7 +1,12 @@
 <html>
 <head>
     <title>Math calculator</title>
-		<meta charset="iso-8859-1">
+	<meta charset="iso-8859-1">
+	<style>
+	*{
+		text-align:center;
+	}
+	</style>
 </head>
 <body>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -26,18 +31,21 @@
 		switch($calc){
 			case '+':
 				$sum = $firstnumber + $secondnumber;
+				echo $firstnumber . " + " . $secondnumber . " = " . $sum;
 				break;
 			case '-':
 				$sum = $firstnumber - $secondnumber;
+				echo $firstnumber . " - " . $secondnumber . " = " . $sum;
 				break;
 			case '/':
 				$sum = $firstnumber / $secondnumber;
+				echo $firstnumber . " / " . $secondnumber . " = " . $sum;
 				break;
 			case '*':
 				$sum = $firstnumber * $secondnumber;
+				echo $firstnumber . " * " . $secondnumber . " = " . $sum;
 				break;
 		}
-		echo $sum;
 	}
 	?>
 </body>
